@@ -1,0 +1,247 @@
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  font-size: 16px;
+  font-family: "DM Serif Display", sans-serif;
+  text-align: center;
+}
+
+#intro .content, #different .content {
+  font-family: "Karla";
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 0 0.6rem;
+}
+
+nav button, #intro button, #different button {
+  border: 1px solid white;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--dark-violet);
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 1px;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  position: relative;
+  inset: 5rem 0 0 0;
+}
+
+.top-bar {
+  background-color: var(--very-light-gray);
+  width: calc(100% - 3rem);
+  position: fixed;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+nav {
+  position: fixed;
+  background-color: var(--very-dark-violet);
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  inset: 5rem 0 0 0;
+  -webkit-transition: opacity 500ms, -webkit-transform 500ms;
+  transition: opacity 500ms, -webkit-transform 500ms;
+  transition: opacity 500ms, transform 500ms;
+  transition: opacity 500ms, transform 500ms, -webkit-transform 500ms;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+nav.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+nav div:nth-child(n) {
+  margin-top: 2.5rem;
+}
+
+nav button {
+  background-color: var(--very-dark-violet);
+  width: calc(100% - 2rem);
+  font-size: 1.25rem;
+  padding: 1.25rem 0;
+  margin: 2rem 1rem 0 1rem;
+}
+
+.hero img {
+  display: block;
+  margin: auto;
+}
+
+#intro {
+  position: relative;
+  background-color: var(--dark-violet);
+  color: var(--very-light-gray);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+  background-position: top left;
+}
+
+#intro .wrap {
+  padding: 5rem 1rem;
+}
+
+#intro h1 {
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+#intro .content {
+  margin-bottom: 2.5rem;
+}
+
+#intro button {
+  font-size: 0.75rem;
+}
+
+#intro::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -176px;
+  background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+  background-repeat: no-repeat;
+  width: 124px;
+  height: 330px;
+}
+
+#different {
+  padding: 5rem 1rem;
+}
+
+#different hr {
+  width: 8rem;
+  border: 0.5px solid var(--dark-grayish-violet);
+  margin: 4rem auto 2rem auto;
+}
+
+#different h1 {
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+#different .sub-section {
+  padding: 2rem 0;
+}
+
+#different .content {
+  color: var(--dark-grayish-violet);
+}
+
+#different .footer {
+  position: relative;
+  background-color: var(--dark-violet);
+  color: var(--very-light-gray);
+  padding: 4.3rem 0 4.5rem 0;
+  margin: 0 0.5rem;
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#different .footer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#different button {
+  font-size: 0.75rem;
+}
+
+footer {
+  background-color: var(--very-light-gray);
+  background-image: url("../images/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 5rem;
+}
+
+footer .contact {
+  position: relative;
+  padding: 5.3rem 0 1rem 0;
+}
+
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+footer .title {
+  color: var(--dark-grayish-violet);
+  padding: 1rem 0;
+}
+
+footer hr {
+  margin: 1.5rem;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+footer ul li {
+  padding: 0.5rem;
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--very-light-gray);
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */

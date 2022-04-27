@@ -1,0 +1,220 @@
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  font-size: 16px;
+  font-family: "DM Serif Display", sans-serif;
+  text-align: center;
+}
+
+%content {
+  font-family: "Karla";
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 0 0.6rem;
+}
+
+%button {
+  border: 1px solid white;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--dark-violet);
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 1px;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  position: relative;
+  inset: 5rem 0 0 0;
+}
+
+.top-bar {
+  background-color: var(--very-light-gray);
+  width: calc(100% - 3rem);
+  position: fixed;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+nav {
+  // display: none;
+  position: fixed;
+  background: {
+    color: var(--very-dark-violet);
+    image: url('../images/bg-pattern-mobile-nav.svg');
+    position: bottom;
+    repeat: no-repeat;
+  }
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  inset: 5rem 0 0 0;
+  transition: opacity 500ms, transform 500ms;
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+  &.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  div:nth-child(n) {
+    margin-top: 2.5rem;
+  }
+  button {
+    @extend %button;
+    background-color: var(--very-dark-violet);
+    width: calc(100% - 2rem);
+    font-size: 1.25rem;
+    padding: 1.25rem 0;
+    margin: 2rem 1rem 0 1rem;
+  }
+}
+
+.hero {
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+#intro {
+  position: relative;
+  background-color: var(--dark-violet);
+  color: var(--very-light-gray);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+  background-position: top left;
+  .wrap {
+    padding: 5rem 1rem;
+  }
+  h1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+    margin: 0;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .content {
+    @extend %content;
+    margin-bottom: 2.5rem;
+  }
+  button {
+    @extend %button;
+    font-size: 0.75rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -176px;
+    background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+    background-repeat: no-repeat;
+    width: 124px;
+    height: 330px;
+  }
+}
+
+#different {
+  padding: 5rem 1rem;
+  hr {
+    width: 8rem;
+    border: 0.5px solid var(--dark-grayish-violet);
+    margin: 4rem auto 2rem auto;
+  }
+  h1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+    margin: 0;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .sub-section {
+    padding: 2rem 0;
+  }
+  .content {
+    @extend %content;
+    color: var(--dark-grayish-violet);
+  }
+  .footer {
+    position: relative;
+    background-color: var(--dark-violet);
+    color: var(--very-light-gray);
+    padding: 4.3rem 0 4.5rem 0;
+    margin: 0 0.5rem;
+    background: {
+      image: url("../images/bg-pattern-how-we-work-mobile.svg");
+      repeat: no-repeat;
+      position: top right;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+  button {
+    @extend %button;
+    font-size: 0.75rem;
+  }
+}
+
+footer {
+  background-color: var(--very-light-gray);
+  background-image: url('../images/bg-pattern-footer-mobile.svg');
+  background-repeat: no-repeat;
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 5rem;
+  .contact {
+    position: relative;
+    padding: 5.3rem 0 1rem 0;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .title {
+    color: var(--dark-grayish-violet);
+    padding: 1rem 0;
+  }
+  hr {
+    margin: 1.5rem;
+  }
+  ul {
+    padding: 0;
+    margin: 0.5rem 0;
+    li {
+      padding: 0.5rem;
+      display: block;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--very-light-gray);
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
