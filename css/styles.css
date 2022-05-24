@@ -16,7 +16,7 @@
   padding: 0 0.6rem;
 }
 
-nav button, #intro button, #different button {
+button {
   border: 1px solid white;
   color: white;
   text-transform: uppercase;
@@ -30,16 +30,37 @@ body {
   margin: 0;
 }
 
+@media (max-width: 425px) {
+  .nav-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 426px) {
+  #drawer-btn {
+    display: none;
+  }
+  .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Karla";
+    line-height: 32px;
+    gap: 1.5rem;
+  }
+  .nav-bar button {
+    color: var(--dark-violet);
+    border-color: var(--dark-violet);
+    background-color: var(--very-light-gray);
+  }
+}
+
 main {
   position: relative;
-  inset: 5rem 0 0 0;
+  padding-top: 5rem;
 }
 
 .top-bar {
-  background-color: var(--very-light-gray);
-  width: calc(100% - 3rem);
-  position: fixed;
-  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,6 +70,11 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: calc(100% - 3rem);
+  min-height: 32px;
+  position: fixed;
+  padding: 1.5rem;
+  background-color: var(--very-light-gray);
   z-index: 1;
 }
 
@@ -94,6 +120,7 @@ nav button {
 }
 
 .hero img {
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -189,6 +216,7 @@ footer {
   background-color: var(--very-light-gray);
   background-image: url("../images/bg-pattern-footer-mobile.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   font-family: "Karla";
   font-weight: 700;
   font-size: 0.8rem;
